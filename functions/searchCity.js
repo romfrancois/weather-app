@@ -2,7 +2,7 @@
 const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
-    const { query: city, units } = JSON.parse(event.body);
+    const { city, units } = JSON.parse(event.body);
 
     const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.OPENWEATHERMAP_API_KEY}&units=${units}`,

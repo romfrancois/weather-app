@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+input {
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid #22254b;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    color: white;
+}
+
+.weather {
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid red;
+    width: 100%;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    color: grey;
+}
+
+.currentWeather {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid red;
+    width: 100%;
+    padding-right: 5rem;
+}
+
+.currentCity {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.lhs_temperature {
+    padding-left: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    /* display: flex;
+    align-items: center; */
+}
+
+.rhs_temperature {
+    display: flex;
+    align-items: center;
+}
+
+.feelsLike,
+.high,
+.low,
+.humidity,
+.wind,
+.pressure {
+    padding: 1rem;
+    border: 1px solid red;
+}
