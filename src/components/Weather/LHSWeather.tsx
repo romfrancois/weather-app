@@ -1,30 +1,26 @@
 import React from 'react';
 
-type CurrentCity = {
-    cityName: string;
-    currentWeatherIcon: string;
-    currentWeatherLegend: string;
-    currentWeatherTemp: number;
-};
+import { WeatherCity } from '../../types/WeatherCity';
 
-const CurrentCity = ({
+const LHSWeather = ({
     cityName,
     currentWeatherIcon,
     currentWeatherLegend,
     currentWeatherTemp,
-}: CurrentCity): JSX.Element => {
+}: WeatherCity): JSX.Element => {
     return (
         <div className="currentCity">
+            <h4>Current Weather</h4>
             <h3>{cityName}</h3>
             <div className="city">
                 <div className="state">
-                    <img src={currentWeatherIcon} alt="Sun" />
+                    <img src={currentWeatherIcon} alt={currentWeatherLegend} />
                     <span>{currentWeatherLegend}</span>
                 </div>
-                <div className="lhs_temperature">{currentWeatherTemp}</div>
+                <div className="lhs_temperature">{currentWeatherTemp}°</div>
             </div>
         </div>
     );
 };
 
-export default CurrentCity;
+export default LHSWeather;

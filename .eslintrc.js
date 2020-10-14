@@ -22,6 +22,7 @@ module.exports = {
         'plugin:prettier/recommended',
     ],
     rules: {
+        'react/jsx-one-expression-per-line': 'off',
         indent: ['error', 4, { ignoredNodes: ['JSXElement *'] }],
         'react/jsx-props-no-spreading': [1],
         'no-shadow': 'off',
@@ -51,8 +52,8 @@ module.exports = {
             version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
         },
         'import/resolver': {
-            node: {
-                extensions: ['.ts', '.tsx', '.native.js'],
+            webpack: {
+                extensions: ['.ts', '.tsx'],
             },
         },
     },

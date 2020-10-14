@@ -3,21 +3,24 @@
 }
 
 body {
-    background-color: lightblue;
+    background-image: url(https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1915&q=80);
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    color: rgb(57, 107, 174);
 }
 
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 input {
@@ -30,21 +33,36 @@ input {
     color: white;
 }
 
+input:focus {
+    outline: none;
+}
+
 .weather {
     width: 100%;
+    padding: 3rem;
 }
 
 .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    border: 1px solid red;
-    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 20px;
+    background-image: url(https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1915&q=80);
+}
+
+button {
+    margin-right: 10px;
+    background-color: lightgrey;
+    border-radius: 100%;
 }
 
 h3 {
     font-size: 2rem;
+    margin-top: 0px;
 }
 
 h4 {
@@ -57,9 +75,30 @@ h4 {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    border: 1px solid red;
     width: 100%;
     padding-right: 5rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.forecast h4 {
+    margin-left: 20px;
+}
+
+.daily {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .currentCity {
@@ -73,7 +112,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .state {
@@ -81,7 +120,7 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .lhs_temperature {
@@ -104,5 +143,15 @@ h4 {
 .wind,
 .pressure {
     padding: 1rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    color: rgb(123, 152, 178);
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    overflow: hidden;
 }

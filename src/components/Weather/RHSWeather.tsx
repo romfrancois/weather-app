@@ -3,36 +3,37 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTemperatureHigh, faTemperatureLow, faTint, faWind, faCompressAlt } from '@fortawesome/free-solid-svg-icons';
 
-type CurrentData = {
-    feelsLike: number;
-    highTemp: number;
-    lowTemp: number;
-    humidity: number;
-    wind: number;
-    pressure: number;
-};
+import { WeatherSummary } from '../../types/WeatherSummary';
 
-const CurrentData = ({ feelsLike, highTemp, lowTemp, humidity, wind, pressure }: CurrentData): JSX.Element => {
+const RHSWeather = ({ feelsLike, highTemp, lowTemp, humidity, wind, pressure }: WeatherSummary): JSX.Element => {
     return (
         <div className="currrentData">
             <p className="feelsLike">
                 Feels like
+		{' '}
                 {feelsLike}
+                    {'°'}
             </p>
             <div className="rhs_temperature">
                 <div className="high">
                     <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faTemperatureHigh} />
                     {highTemp}
+                    {'°'}
                 </div>
                 <div className="low">
                     <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faTemperatureLow} />
                     {lowTemp}
+                    {'°'}
                 </div>
             </div>
             <div className="wind">
                 <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faTint} />
-                Humidity
-                {humidity}
+                <span>
+                    Humidity
+		    	{' '}
+                    {humidity}
+                    {'%'}
+                </span>
             </div>
             <div className="wind">
                 <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faWind} />
@@ -56,4 +57,4 @@ const CurrentData = ({ feelsLike, highTemp, lowTemp, humidity, wind, pressure }:
     );
 };
 
-export default CurrentData;
+export default RHSWeather;
