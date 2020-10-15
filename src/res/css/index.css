@@ -13,14 +13,15 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    min-width: 620px;
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    padding: 3rem;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
 }
 
 input {
@@ -37,19 +38,15 @@ input:focus {
     outline: none;
 }
 
-.weather {
-    width: 100%;
-    padding: 3rem;
-}
-
-.top {
+.options {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1rem;
     border-radius: 20px;
     background-image: url(https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1915&q=80);
 }
@@ -58,6 +55,18 @@ button {
     margin-right: 10px;
     background-color: lightgrey;
     border-radius: 100%;
+}
+
+.weather {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 h3 {
@@ -69,24 +78,13 @@ h4 {
     color: grey;
 }
 
-.currentWeather {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    width: 100%;
-    padding-right: 5rem;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
 .forecast {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.75);
-    margin-top: 20px;
-    width: 100%;
+    width: 70%;
+    margin: auto;
+    margin-top: 1rem;
     justify-content: space-between;
     border-radius: 20px;
 }
@@ -104,31 +102,22 @@ h4 {
 .currentCity {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: space-between;
 }
 
 .city {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* border: 1px solid red; */
 }
 
 .state {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    /* border: 1px solid red; */
 }
 
 .lhs_temperature {
-    padding-left: 2rem;
     font-size: 3rem;
     font-weight: bold;
-    /* display: flex;
-    align-items: center; */
+    margin: auto;
 }
 
 .rhs_temperature {
@@ -143,7 +132,6 @@ h4 {
 .wind,
 .pressure {
     padding: 1rem;
-    /* border: 1px solid red; */
     color: rgb(123, 152, 178);
 }
 
@@ -154,4 +142,67 @@ h4 {
     color: white;
     padding: 1rem;
     overflow: hidden;
+}
+
+@media (max-width: 375px) {
+    .container {
+        min-width: 0;
+    }
+
+    header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .options {
+        width: 90%;
+    }
+
+    .weather {
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+        align-items: unset;
+    }
+
+    .city {
+        flex-direction: column;
+    }
+
+    .currentData {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .forecast {
+        width: 90%;
+        margin: auto;
+        align-items: unset;
+        margin-top: 1rem;
+    }
+
+    .daily {
+        display: flex;
+        overflow-x: auto;
+        justify-content: unset;
+    }
+
+    .day {
+        overflow: unset;
+    }
+
+    .feelsLike,
+    .high,
+    .low,
+    .humidity,
+    .wind,
+    .pressure {
+        padding: 5px;
+    }
+
+    .state img {
+        max-width: 70%;
+        height: auto;
+    }
 }
