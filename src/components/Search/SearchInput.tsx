@@ -3,13 +3,13 @@ import React, { useContext, useState } from 'react';
 import { WeatherByCityContext } from '../../App';
 
 const SearchInput = (): JSX.Element => {
-    const context = useContext(WeatherByCityContext);
+    const { dispatch } = useContext(WeatherByCityContext);
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
 
-        context.setCurrentCity(searchTerm);
+        dispatch({ type: 'setCity', value: searchTerm });
         setSearchTerm('');
     };
 

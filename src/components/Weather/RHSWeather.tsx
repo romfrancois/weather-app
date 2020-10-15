@@ -7,33 +7,21 @@ import { WeatherSummary } from '../../types/WeatherSummary';
 
 const RHSWeather = ({ feelsLike, highTemp, lowTemp, humidity, wind, pressure }: WeatherSummary): JSX.Element => {
     return (
-        <div className="currrentData">
-            <p className="feelsLike">
-                Feels like
-		{' '}
-                {feelsLike}
-                    {'°'}
-            </p>
+        <div className="currentData">
+            <p className="feelsLike">Feels like {feelsLike}°</p>
             <div className="rhs_temperature">
                 <div className="high">
                     <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faTemperatureHigh} />
-                    {highTemp}
-                    {'°'}
+                    {highTemp}°
                 </div>
                 <div className="low">
                     <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faTemperatureLow} />
-                    {lowTemp}
-                    {'°'}
+                    {lowTemp}°
                 </div>
             </div>
             <div className="wind">
                 <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faTint} />
-                <span>
-                    Humidity
-		    	{' '}
-                    {humidity}
-                    {'%'}
-                </span>
+                <span>Humidity {humidity}%</span>
             </div>
             <div className="wind">
                 <FontAwesomeIcon className="faStyle fa-fw fa-lg" icon={faWind} />

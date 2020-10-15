@@ -23,7 +23,7 @@ module.exports = {
     ],
     rules: {
         'react/jsx-one-expression-per-line': 'off',
-        indent: ['error', 4, { ignoredNodes: ['JSXElement *'] }],
+        indent: ['error', 4, { ignoredNodes: ['JSXElement *'], SwitchCase: 1 }],
         'react/jsx-props-no-spreading': [1],
         'no-shadow': 'off',
         'react/jsx-indent': [0],
